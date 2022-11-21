@@ -1,8 +1,15 @@
 import "./global.css";
 import styles from "./App.module.css";
 
+import { Header } from "./components/Header";
+
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div>
+      <Header />
+      <div></div>
+    </div>
+  );
 }
 
 export default App;
