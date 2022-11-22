@@ -6,7 +6,7 @@ import { InputTask } from "./components/InputTask";
 
 function App() {
   return (
-    <div>
+    <div className={styles.container}>
       <Header />
       <InputTask />
       <div></div>
