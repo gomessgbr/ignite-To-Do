@@ -6,10 +6,12 @@ import { InputTask } from "./components/InputTask";
 
 function App() {
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
       <Header />
-      <InputTask />
-      <div></div>
+
+      <div className={styles.content}>
+        <InputTask />
+      </div>
     </div>
   );
 }
