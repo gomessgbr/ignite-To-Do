@@ -3,7 +3,7 @@ import styles from "./InputTask.module.css";
 
 export function InputTask() {
   return (
-    <div className={styles.container}>
+    <div className={styles.containerInputTask}>
       <header className={styles.inputTaskContainer}>
         <form>
           <input
