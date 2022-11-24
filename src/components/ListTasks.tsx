@@ -1,4 +1,3 @@
-import { Trash } from "phosphor-react";
 import { InputTask } from "./InputTask";
 import styles from "./ListTasks.module.css";
 
@@ -8,10 +7,14 @@ export function ListTasks() {
       <InputTask />
 
       <div className={styles.headerTasks}>
-        <p style={{ color: "var(--blue)" }}>Tarefas Criadas</p>
-        <p style={{ color: "var(--purple)" }}>Concluídas</p>
+        <p style={{ color: "var(--blue)" }}>
+          Tarefas Criadas<span>5</span>
+        </p>
+        <p style={{ color: "var(--purple)" }}>
+          Concluídas<span>2 de 5</span>
+        </p>
       </div>
-      <div>{/* <Trash size={24} /> */}</div>
+      <div></div>
     </div>
   );
 }
