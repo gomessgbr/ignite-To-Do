@@ -1,5 +1,6 @@
 import { InputTask } from "./InputTask";
 import styles from "./ListTasks.module.css";
+import { TaskItem } from "./TaskItem";
 
 export function ListTasks() {
   return (
@@ -14,7 +15,11 @@ export function ListTasks() {
           Concluídas<span> 2 de 5</span>
         </div>
       </div>
-      <div></div>
+
+      <TaskItem />
+      <TaskItem />
+      <TaskItem />
+      <TaskItem />
     </div>
   );
 }
