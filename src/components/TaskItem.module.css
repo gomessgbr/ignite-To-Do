@@ -1,0 +1,67 @@
+.containerTaskItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 12px;
+  width: 100%;
+  max-width: 46rem;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.radioButton,
+.radioButtonSeleted {
+  grid-area: toggle;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  border-radius: 999px;
+}
+
+.radioButton {
+  border: 2px solid var(--blue);
+  background: none;
+}
+.radioButtonSeleted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-100);
+  border: 3px solid var(--purple);
+  background: var(--purple);
+}
+
+.contentTask,
+.contentTaskSelected {
+  grid-area: text;
+  width: 90%;
+  text-align: justify;
+  color: var(--gray-100);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.22rem;
+}
+.contentTask {
+}
+
+.contentTaskSelected {
+  text-decoration-line: line-through;
+  color: var(--gray-300);
+}
+
+.deleteButton {
+  grid-area: delete;
+  display: flex;
+  background-color: transparent;
+  border: 0;
+  color: var(--gray-300);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.deleteButton:hover {
+  color: var(--danger);
+}
