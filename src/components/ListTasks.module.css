@@ -1,24 +1,61 @@
-.container {
+.containerListTask {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  max-width: 48rem;
 }
 .headerTasks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-
   max-width: 46rem;
-
-  margin-top: 4rem;
+  margin-top: 4.06rem;
 }
 
 .createTask {
+  display: flex;
   color: var(--blue);
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 .doneTask {
+  display: flex;
   color: var(--purple);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.createTask > span {
+  width: 1.5rem;
+  height: 1.18rem;
+  padding: 2px 8px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  background: var(--gray-400);
+  color: var(--gray-200);
+  margin-left: 5px;
+  line-height: 0.9rem;
+}
+
+.doneTask > span {
+  width: 3.25rem;
+  height: 1.18rem;
+  padding: 2px 8px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  background: var(--gray-400);
+  color: var(--gray-200);
+  margin-left: 5px;
+  line-height: 0.9rem;
 }
