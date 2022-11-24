@@ -7,12 +7,12 @@ export function ListTasks() {
       <InputTask />
 
       <div className={styles.headerTasks}>
-        <p style={{ color: "var(--blue)" }}>
-          Tarefas Criadas<span>5</span>
-        </p>
-        <p style={{ color: "var(--purple)" }}>
-          Concluídas<span>2 de 5</span>
-        </p>
+        <div className={styles.createTask}>
+          Tarefas Criadas<span> 5</span>
+        </div>
+        <div className={styles.doneTask}>
+          Concluídas<span> 2 de 5</span>
+        </div>
       </div>
       <div></div>
     </div>
