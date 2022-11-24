@@ -4,7 +4,7 @@ import todoLogo from "../assets/todoLogo.svg";
 
 export function Header() {
   return (
-    <header className={styles.container}>
+    <header className={styles.containerHeader}>
       <img src={todoLogo} alt="Logo todo" />
     </header>
   );
