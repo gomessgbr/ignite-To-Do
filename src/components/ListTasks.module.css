@@ -14,3 +14,11 @@
 
   margin-top: 4rem;
 }
+
+.createTask {
+  color: var(--blue);
+}
+
+.doneTask {
+  color: var(--purple);
+}
