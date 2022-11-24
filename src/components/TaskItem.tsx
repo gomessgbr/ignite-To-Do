@@ -1,5 +1,7 @@
+import { Trash } from "phosphor-react";
+
+import styles from "./TaskItem.module.css";
+
 export function TaskItem() {
-  return <div>
-    
-  </div>;
+  return <div className={styles.container}></div>;
 }
