@@ -2,7 +2,12 @@ import { Trash } from "phosphor-react";
 
 import styles from "./TaskItem.module.css";
 
-export function TaskItem() {
+interface TaskItemProps {
+  done: string;
+  onDelete: () => void;
+}
+
+export function TaskItem({ done, onDelete }: TaskItemProps) {
   return (
     <div className={styles.containerTaskItem}>
       <button className={styles.radioButton} />
