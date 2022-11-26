@@ -17,11 +17,19 @@ export function TaskItem({
   onSelected,
   onDelete,
 }: TaskItemProps) {
+  function handleDelete() {
+    onDelete(taskId);
+  }
+
+  function handleSelected() {
+    onSelected(taskId);
+  }
+
   return (
     <div className={styles.containerTaskItem}>
-      <button className={styles.radioButton} />
+      <button className={styles.radioButton} onClick={handleSelected} />
       <div className={styles.contentTask}>{content}</div>
-      <button className={styles.deleteButton}>
+      <button className={styles.deleteButton} onClick={handleDelete}>
         <Trash size={20} />
       </button>
     </div>
