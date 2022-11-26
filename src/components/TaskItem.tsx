@@ -7,7 +7,7 @@ interface TaskItemProps {
   content: string;
   isDone: boolean;
   onSelected: () => void;
-  onDelete: () => void;
+  onDelete: (taskId: string) => void;
 }
 
 export function TaskItem({
