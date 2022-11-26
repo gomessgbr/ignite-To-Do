@@ -5,6 +5,7 @@ import styles from "./TaskItem.module.css";
 interface TaskItemProps {
   done: string;
   onDelete: () => void;
+  onCreate: () => void;
 }
 
 export function TaskItem({ done, onDelete }: TaskItemProps) {
