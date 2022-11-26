@@ -1,8 +1,15 @@
+import { useState } from "react";
 import { InputTask } from "./InputTask";
 import styles from "./ListTasks.module.css";
 import { TaskItem } from "./TaskItem";
 
 export function ListTasks() {
+  const [task, setTask] = useState([
+    {
+      task: "Lavar a louça",
+      isDone: false,
+    },
+  ]);
   return (
     <div className={styles.containerListTask}>
       <InputTask />
@@ -16,10 +23,13 @@ export function ListTasks() {
         </div>
       </div>
 
-      <TaskItem />
-      <TaskItem />
-      <TaskItem />
-      <TaskItem />
+      <TaskItem
+        taskId="teste"
+        content="Lorem Zica"
+        isDone
+        onDelete={handleDelete}
+        onSelected={handleSelected}
+      />
     </div>
   );
 }
