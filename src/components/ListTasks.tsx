@@ -40,7 +40,7 @@ export function ListTasks() {
 
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
-
+    console.log(event);
     const NewTask = {
       id: uuidv4(),
       content: newTaskContent,
