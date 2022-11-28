@@ -79,9 +79,12 @@ export function ListTasks() {
         return task;
       }
     });
+
     setDoneTasks(`${done.length} de ${tasks.length}`);
   }
-
+  useEffect(() => {
+    doneTasksFunc();
+  }, []);
   return (
     <div className={styles.containerListTask}>
       <div className={styles.containerInputNewTask}>
