@@ -61,7 +61,16 @@ export function ListTasks() {
 
     setTasks(taskWithOutDeletedOne);
   }
-  function handleSelected() {}
+
+  function handleSelected(idTask: string) {
+    const newTasks = tasks.map((task: TaskInterface) => {
+      if (idTask === task.id) {
+        task.isDone = !task.isDone;
+      }
+      return task;
+    });
+    setTasks(newTasks);
+  }
   return (
     <div className={styles.containerListTask}>
       <div className={styles.containerInputNewTask}>
@@ -84,7 +93,7 @@ export function ListTasks() {
 
       <div className={styles.headerTasks}>
         <div className={styles.createTask}>
-          Tarefas Criadas<span> 5</span>
+          Tarefas Criadas<span> {tasks.length}</span>
         </div>
         <div className={styles.doneTask}>
           Concluídas<span> 2 de 5</span>

@@ -6,7 +6,7 @@ interface TaskItemProps {
   taskId: string;
   content: string;
   isDone: boolean;
-  onSelected: () => void;
+  onSelected: (taskId: string) => void;
   onDelete: (taskId: string) => void;
 }
 
