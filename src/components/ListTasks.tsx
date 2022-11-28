@@ -52,6 +52,7 @@ export function ListTasks() {
 
   function handleNewTaskChange(event: ChangeEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity("");
+
     setNewTaskContent(event.target.value);
   }
   function handleDelete(idTask: string) {
@@ -84,7 +85,8 @@ export function ListTasks() {
   }
   useEffect(() => {
     doneTasksFunc();
-  }, []);
+  }, [tasks]);
+
   return (
     <div className={styles.containerListTask}>
       <div className={styles.containerInputNewTask}>
@@ -97,7 +99,11 @@ export function ListTasks() {
               value={newTaskContent}
               onChange={handleNewTaskChange}
             />
-            <button type="submit" className={styles.inputNewTaskButton}>
+            <button
+              type="submit"
+              className={styles.inputNewTaskButton}
+              disabled={newTaskContent.length === 0}
+            >
               Criar
               <PlusCircle size={20} />
             </button>
