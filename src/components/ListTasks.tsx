@@ -2,6 +2,8 @@ import { PlusCircle } from "phosphor-react";
 import { ChangeEvent, FormEvent, useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
+import clipboard from "../assets/clipBoard.svg";
+
 import styles from "./ListTasks.module.css";
 import { TaskItem } from "./TaskItem";
 
@@ -119,16 +121,24 @@ export function ListTasks() {
           Concluídas<span> {doneTasks}</span>
         </div>
       </div>
-      {tasks.map((task) => (
-        <TaskItem
-          key={task.id}
-          taskId={task.id}
-          content={task.content}
-          isDone={task.isDone}
-          onDelete={handleDelete}
-          onSelected={handleSelected}
-        />
-      ))}
+      {tasks.length > 0 ? (
+        tasks.map((task) => (
+          <TaskItem
+            key={task.id}
+            taskId={task.id}
+            content={task.content}
+            isDone={task.isDone}
+            onDelete={handleDelete}
+            onSelected={handleSelected}
+          />
+        ))
+      ) : (
+        <div className={styles.emptyTaskConteiner}>
+          <img src={clipboard} alt="" />
+          <strong>Você ainda não tem tarefas cadastradas</strong>
+          <p>Crie tarefas e organize seus itens a fazer</p>
+        </div>
+      )}
     </div>
   );
 }

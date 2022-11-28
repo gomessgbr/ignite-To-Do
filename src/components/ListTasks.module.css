@@ -120,7 +120,25 @@
   margin-left: 5px;
   line-height: 0.9rem;
 }
+.emptyTaskConteiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 6.5rem;
+  color: var(--gray-300);
+}
+.emptyTaskConteiner img {
+  margin-bottom: 1.5rem;
+}
 
+.emptyTaskConteiner > strong {
+  font-weight: 700;
+}
+
+.emptyTaskConteiner > {
+  font-weight: 400;
+}
 @media (max-width: 46rem) {
   .inputTaskContainer > form {
     display: flex;
