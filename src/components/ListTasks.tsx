@@ -40,7 +40,7 @@ export function ListTasks() {
 
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
-    console.log(event);
+
     const NewTask = {
       id: uuidv4(),
       content: newTaskContent,
@@ -64,7 +64,6 @@ export function ListTasks() {
   function handleSelected() {}
   return (
     <div className={styles.containerListTask}>
-      {/* <InputTask createNewTask={handleCreateNewTask} /> */}
       <div className={styles.containerInputNewTask}>
         <header className={styles.inputNewTaskContainer}>
           <form onSubmit={handleCreateNewTask}>
