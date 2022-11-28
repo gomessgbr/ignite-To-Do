@@ -1,4 +1,4 @@
-import { Trash } from "phosphor-react";
+import { Check, Trash } from "phosphor-react";
 
 import styles from "./TaskItem.module.css";
 
@@ -27,7 +27,12 @@ export function TaskItem({
 
   return (
     <div className={styles.containerTaskItem}>
-      <button className={styles.radioButton} onClick={handleSelected} />
+      <button
+        className={isDone ? styles.radioButtonSeleted : styles.radioButton}
+        onClick={handleSelected}
+      >
+        {isDone && <Check size={15} />}
+      </button>
       <div className={styles.contentTask}>{content}</div>
       <button className={styles.deleteButton} onClick={handleDelete}>
         <Trash size={20} />
