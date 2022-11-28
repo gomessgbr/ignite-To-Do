@@ -1,8 +1,7 @@
 import { PlusCircle } from "phosphor-react";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-import { InputTask } from "./InputTask";
 import styles from "./ListTasks.module.css";
 import { TaskItem } from "./TaskItem";
 
@@ -37,6 +36,7 @@ interface TaskInterface {
 export function ListTasks() {
   const [tasks, setTasks] = useState<TaskInterface[]>(tasksMock);
   const [newTaskContent, setNewTaskContent] = useState("");
+  const [doneTasks, setDoneTasks] = useState("0");
 
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
@@ -70,7 +70,18 @@ export function ListTasks() {
       return task;
     });
     setTasks(newTasks);
+    doneTasksFunc();
   }
+
+  function doneTasksFunc() {
+    const done = tasks.filter((task) => {
+      if (task.isDone) {
+        return task;
+      }
+    });
+    setDoneTasks(`${done.length} de ${tasks.length}`);
+  }
+
   return (
     <div className={styles.containerListTask}>
       <div className={styles.containerInputNewTask}>
@@ -96,7 +107,7 @@ export function ListTasks() {
           Tarefas Criadas<span> {tasks.length}</span>
         </div>
         <div className={styles.doneTask}>
-          Concluídas<span> 2 de 5</span>
+          Concluídas<span> {doneTasks}</span>
         </div>
       </div>
       {tasks.map((task) => (
