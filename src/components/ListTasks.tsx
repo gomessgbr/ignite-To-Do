@@ -52,7 +52,7 @@ export function ListTasks() {
     setNewTaskContent("");
   }
 
-  function handleNewTaskChange(event: ChangeEvent<HTMLTextAreaElement>) {
+  function handleNewTaskChange(event: ChangeEvent<HTMLInputElement>) {
     event.target.setCustomValidity("");
 
     setNewTaskContent(event.target.value);
